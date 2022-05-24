@@ -4,17 +4,18 @@
   width: 100px;
   /* version 1 */
   border-width: 5px;
-  border-style: solid;
   border-color: blue;
+  border-style: solid;
   /* version 2 */
-  border: solid blue 5px;
+  /* border: solid blue 5px; */
 }
 
 .box2 {
   background-color: greenyellow;
   height: 100px;
   width: 100px;
-  border: 2px solid red;
+
+  border: 2px red dotted;
   border-radius: 5px;
 }
 
@@ -31,7 +32,7 @@
 }
 
 .box3 {
-  background-color: rgba(230, 230, 250, 0.6);
+  background-color: rgba(229, 229, 250, 0.6);
 }
 
 h2 {
@@ -45,7 +46,7 @@ h2 {
 
 .box6 {
   background-color: papayawhip;
-  box-shadow: 5px -10px #800000;
+  box-shadow: -5px -10px #800000;
 }
 
 /* do not change below this line */
