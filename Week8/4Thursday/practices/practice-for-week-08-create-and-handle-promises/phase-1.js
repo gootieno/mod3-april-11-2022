@@ -1,55 +1,59 @@
-function stretch(time) {
-  // Your code here
+function stretch() {
+  //!!START
   return new Promise((resolve, reject) => {
-    if (time < 1000) {
-      reject("Not enough time to run on mill");
-    } else {
-      time -= 1000;
-      setTimeout(() => {
-        console.log("done stretching");
-        resolve();
-      }, 1000);
-   }
+    setTimeout(() => {
+      resolve();
+      console.log("done stretching");
+    }, 1000);
   });
+  //!!END
 }
 
 function runOnTreadmill() {
-  // Your code here
+  //!!START
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       console.log("done running on treadmill");
       resolve();
     }, 500);
   });
+  //!!END
 }
 
 function liftWeights() {
-  // Your code here
+  //!!START
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       console.log("done lifting weights");
       resolve();
     }, 2000);
   });
+  //!!END
 }
 
-function workout(time) {
-  // Your code here
-  stretch(time)
+function workout() {
+  //!!START
+  stretch()
     .then(runOnTreadmill)
     .then(liftWeights)
-    .then(() => console.log("done working out"));
+    .then(() => console.log("done working out"))
+    .catch((err) => console.log(err));
+  //!!END
 }
 
+function sum(n1, n2) {
+  return n1 + n2;
+}
 /* ============================ TEST YOUR CODE ============================
 
 Run the file (`node phase-1.js`) and check your output against the expected
 output.
 */
 
-workout(1000);
-// should print out the following:
-// done stretching
-// done running on treadmill
-// done lifting weights
-// done working out
+
+workout();
+  // should print out the following:
+    // done stretching
+    // done running on treadmill
+    // done lifting weights
+    // done working out
