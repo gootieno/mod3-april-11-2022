@@ -3,10 +3,16 @@ const sanboxFunc = () => {
 };
 
 // handle single export
-const imUsedEveryWhere = ({ username, password }) => {
+export const imUsedEveryWhere = (id) => {
   // i do something with username & password
 
   console.log("You can use this function anywhere");
 };
 
 console.log(sanboxFunc());
+
+// export default sanboxFunc;
+
+export default () => {
+  
+}

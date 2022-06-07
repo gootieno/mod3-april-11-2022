@@ -1,8 +1,9 @@
 //!!START SILENT
-import Game from './game.js';
+// import Game from "../js/game.js";
 
 //!!END
 window.onload = () => {
-    const game = new Game();
-    game.start();
+  document.getElementById("wrapper").style.backgroundColor = "red";
+  const game = new Game();
+  game.start();
 };

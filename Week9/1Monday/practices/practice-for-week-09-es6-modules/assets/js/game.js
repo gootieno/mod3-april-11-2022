@@ -3,6 +3,7 @@ import * as Utilities from "./utilities.js";
 import { mrPotatoHeadQuotes } from "./quotes/mrPotatoHead.js";
 import mrsPotatoHeadQuotes from "./quotes/mrsPotatoHead.js";
 
+console.log("Utils", Utilities);
 //!!END
 export default class Game {
   start() {
